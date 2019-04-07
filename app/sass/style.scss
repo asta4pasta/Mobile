@@ -1,0 +1,8 @@
+$red: #BADA55;
+
+h1 {
+    color: $red;
+    span {
+        color: rgba($red, 0.7);
+    }
+}

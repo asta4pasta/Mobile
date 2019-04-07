@@ -1,0 +1,25 @@
+{
+  "name": "mobile",
+  "version": "1.0.0",
+  "description": "CA uzduotis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asta4pasta/Mobile.git"
+  },
+  "author": "Asta V",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asta4pasta/Mobile/issues"
+  },
+  "homepage": "https://github.com/asta4pasta/Mobile#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
