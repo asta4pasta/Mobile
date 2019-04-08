@@ -1,4 +1,113 @@
+body {
+  background: white;
+  font-family: "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  min-width: 250px;
+  max-width: 400px;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: solid 1px red; }
+
+header {
+  height: 50px;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px green; }
+  header a {
+    color: black; }
+  header button {
+    width: 70px;
+    font-size: 0.8em;
+    height: 35px; }
+
+a {
+  text-decoration: none; }
+
+button {
+  height: 45px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  border-radius: 5px;
+  border: 0;
+  background-color: #007bff;
+  font-size: 1em;
+  color: white;
+  outline-color: lightgrey; }
+
+.masthead {
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: solid 1px yellow; }
+  .masthead h1 {
+    color: white;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+    margin-top: -40px; }
+  .masthead button {
+    width: 100%; }
+
 h1 {
-  color: #f80f0f; }
-  h1 span {
-    color: rgba(248, 15, 15, 0.7); }
+  font-size: 2em; }
+
+input {
+  background: white;
+  color: grey;
+  font-size: 1em;
+  text-align: left;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 45px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  outline-color: #007bff; }
