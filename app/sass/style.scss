@@ -102,6 +102,16 @@ input {
     outline-color: $blue;
 }
 
+.wrap {
+    width: 100%;
+    min-height: 200px;
+    p {
+        line-height: 1.5;
+        font-size: 1.1em;
+        margin-top: 0;
+    }
+}
+
 .features {
     width: 100%;
     height: 950px;
@@ -126,33 +136,26 @@ input {
     }
 }
 
-.wrap {
-    width: 100%;
-    min-height: 200px;
-    p {
-        line-height: 1.5;
-        font-size: 1.1em;
-        margin-top: 0;
-        font-family: 'Century Gothic';
-        font-weight: lighter;
-    }
-}
-
-
-
 svg {
     fill: $blue;
 }
 
-h3 {
+h2 {
     color: black;
     font-size: 1.7em;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
+h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
 p {
-    color: rgb(65, 65, 65);
+    color: black;
+    font-family: 'Century Gothic';
+    font-weight: lighter;
 }
 
 .showcase {
@@ -181,11 +184,66 @@ p {
     }
 }
 
+q {
+    quotes: "“" "”";
+    q:before {
+      content: open-quote;
+    }
+    q:after {
+      content: close-quote;
+    }
+    font-size: 1em;
+    font-family: 'Century Gothic';
+}
+
 .image {
     width: 100%;
     height: 500px;
     background-image: contain;
     background-position: left;
+}
+
+.testimonials {
+    width: 100%;
+    min-height: 1400px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+        .wrap {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 50px;
+        .wrap:first-of-type {
+            margin-top: 60px;
+        }
+        .wrap:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.circle-image {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center center;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: -2px 7px 9px #a6a6a6;
+}
+
+img {
+    height: 100%;
+    width: 100%;
 }
 
 // h1 {
