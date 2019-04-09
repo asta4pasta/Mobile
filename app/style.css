@@ -246,12 +246,10 @@ q {
     align-items: center;
     text-align: center;
     margin-bottom: 50px; }
-    .testimonials .wrap .wrap:first-of-type {
-      margin-top: 60px; }
-    .testimonials .wrap .wrap:last-of-type {
-      margin-bottom: 0; }
-    .testimonials .wrap h1 {
-      margin-bottom: 40px; }
+  .testimonials .wrap:first-of-type {
+    padding-top: 20px; }
+  .testimonials .wrap:last-of-type {
+    margin-bottom: 0; }
 
 .circle-image {
   width: 200px;
@@ -267,3 +265,72 @@ q {
 img {
   height: 100%;
   width: 100%; }
+
+footer {
+  width: 100%;
+  min-height: 60px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  footer a {
+    color: #007bff;
+    cursor: pointer; }
+  footer span {
+    color: grey;
+    font-size: 0.8em;
+    margin-bottom: 20px; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  ul li {
+    font-size: 1em;
+    line-height: 1.5;
+    padding-right: 15px;
+    position: relative; }
+  ul li::after {
+    content: " \B7 ";
+    position: absolute;
+    right: 0;
+    padding-right: 5px; }
+  ul li:last-of-type::after {
+    content: none; }
+
+.social {
+  width: 180px;
+  max-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
