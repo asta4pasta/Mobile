@@ -1,30 +1,112 @@
-$ff: 'Trebuchet MS', sans-serif;
+$fft: 'Trebuchet MS', sans-serif;
+$ffc: 'Century Gothic', sans-serif;
+$pad20: 20px;
 $blue: #007bff;
+$maxw: 1000px;
 
 body {
     background: white;
-    font-family: $ff;
+    font-family: $fft;
     margin: 0;
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2em;
+    color: black;
+}
+
+h2 {
+    color: black;
+    font-size: 1.7em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+p {
+    color: black;
+    font-family: $ffc;
+    font-weight: lighter;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+svg {
+    fill: $blue;
+}
+
+button, input {
+    max-width: 320px;
+    height: 45px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1em;
+    border: 0;
+}
+
+button {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    background-color: $blue;
+    color: white;
+    outline-color: lightgrey;
+    cursor: pointer;
+}
+
+input {
+    
+    background: white;
+    color: grey;
+    text-align: left;
+    width: 100%;       
+    padding-left: $pad20;
+    margin-bottom: 10px;
+    outline-color: $blue;
+}
+
+q {
+    quotes: "“" "”";
+    q:before {
+      content: open-quote;
+    }
+    q:after {
+      content: close-quote;
+    }
+    font-size: 1em;
+    font-family: $ffc;
+}
+
 .container {
     min-width: 250px;
-    max-width: 400px;
+    max-width: 9000px;
     height: 100%;
     margin: 0 auto;
     display:flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 header {
     height: 50px;
     width: 100%;
+    max-width: $maxw;
     margin: 0 auto;
     box-sizing: border-box;
     padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: $pad20;
+    padding-right: $pad20;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,32 +120,13 @@ header {
     }
 }
 
-a {
-    text-decoration: none;
-}
-
-button {
-    height: 45px;
-    box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0;
-    border-radius: 5px;
-    border: 0;
-    background-color: $blue;
-    font-size: 1em;
-    color: white;
-    outline-color: lightgrey;
-    cursor: pointer;
-}
-
 .masthead{
     width: 100%;
     height: 650px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 10px;
+    padding: $pad20;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,35 +135,14 @@ button {
     h1 {
         color: white;
         box-sizing: border-box;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: $pad20;
+        padding-right: $pad20;
         margin-bottom: 40px;
         margin-top: -40px;
     }
     button {
         width: 100%;
     }
-}
-
-
-h1 {
-    font-size: 2em;
-    color: black;
-}
-
-input {
-    background: white;
-    color: grey;
-    font-size: 1em;
-    text-align: left;
-    border-radius: 5px;
-    border: none;
-    width: 100%;
-    height: 45px;
-    box-sizing: border-box;
-    padding-left: 20px;
-    margin-bottom: 10px;
-    outline-color: $blue;
 }
 
 .wrap {
@@ -120,8 +162,8 @@ input {
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: $pad20;
+    padding-right: $pad20;
     .wrap {
         text-align: center;
         margin-bottom: 50px;
@@ -137,26 +179,10 @@ input {
     }
 }
 
-svg {
-    fill: $blue;
-}
-
-h2 {
-    color: black;
-    font-size: 1.7em;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-}
-
-p {
-    color: black;
-    font-family: 'Century Gothic';
-    font-weight: lighter;
+.textblock {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .showcase {
@@ -169,32 +195,20 @@ p {
     img {
         height: 100%;
     }
-    h1, p {
+    .textblock {
         box-sizing: border-box;
         padding-left: 40px;
         padding-right: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
     h1 {
         font-size: 2.1em;
-        margin-top: 50px;
         margin-bottom: 10px;
     }
     p {
-        margin-bottom: 50px;
         line-height: 1.7em;
     }
-}
-
-q {
-    quotes: "“" "”";
-    q:before {
-      content: open-quote;
-    }
-    q:after {
-      content: close-quote;
-    }
-    font-size: 1em;
-    font-family: 'Century Gothic';
 }
 
 .image {
@@ -206,15 +220,17 @@ q {
 
 .testimonials {
     width: 100%;
-    min-height: 1400px;
+    height: 100%;
     background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    padding-left: $pad20;
+    padding-right: $pad20;
     box-sizing: border-box;
         .wrap {
             display:flex;
@@ -224,11 +240,8 @@ q {
             text-align: center;
             margin-bottom: 50px;            
         }
-        .wrap:first-of-type {
-            padding-top: 20px;
-        }
-       .wrap:last-of-type {
-            margin-bottom: 0;
+        h1 {
+            margin-bottom: 80px;
         }
 }
 
@@ -239,12 +252,7 @@ q {
     background-position: center center;
     box-sizing: border-box;
     border-radius: 50%;
-    box-shadow: -2px 7px 9px #a6a6a6;
-}
-
-img {
-    height: 100%;
-    width: 100%;
+    box-shadow: -2px 5px 9px #a6a6a6;
 }
 
 footer {
@@ -255,6 +263,8 @@ footer {
     box-sizing: border-box;
     padding-top: 60px;
     padding-bottom: 60px;
+    padding-left: $pad20;
+    padding-right: $pad20;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -266,7 +276,17 @@ footer {
     span {
         color: grey;
         font-size: 0.8em;
+        margin-top: 5px;
         margin-bottom: 20px;
+    }
+    ul li::after {
+        content: " \B7 ";
+        position: absolute;
+        right: 0;
+        padding-right: 5px;
+    }
+    ul li:last-of-type::after {
+        content: none;
     }
 }
 
@@ -284,28 +304,13 @@ ul {
         padding-right: 15px;
         position: relative;
     }
-    li::after {
-        content: " \B7 ";
-        position: absolute;
-        right: 0;
-        padding-right: 5px;
-    }
-    li:last-of-type::after {
-        content: none;
-    }
 }
 
 .social {
     width: 180px;
-    max-height: 40px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
-
-// h1 {
-//     color: $red;
-//     span {
-//         color: rgba($red, 0.7);
-//     }
-// }
