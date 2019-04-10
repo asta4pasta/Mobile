@@ -1,6 +1,7 @@
 $fft: 'Trebuchet MS', sans-serif;
 $ffc: 'Century Gothic', sans-serif;
 $pad20: 20px;
+$pad40: 40px;
 $blue: #007bff;
 $maxw: 1000px;
 
@@ -37,6 +38,18 @@ p {
     font-family: $ffc;
     font-weight: lighter;
 }
+q {
+    quotes: "“" "”";
+    q:before {
+      content: open-quote;
+    }
+    q:after {
+      content: close-quote;
+    }
+    font-size: 1em;
+    font-family: $ffc;
+    box-sizing: border-box;
+}
 
 img {
     height: 100%;
@@ -65,6 +78,8 @@ button {
     cursor: pointer;
 }
 
+
+
 input {
     
     background: white;
@@ -74,18 +89,6 @@ input {
     padding-left: $pad20;
     margin-bottom: 10px;
     outline-color: $blue;
-}
-
-q {
-    quotes: "“" "”";
-    q:before {
-      content: open-quote;
-    }
-    q:after {
-      content: close-quote;
-    }
-    font-size: 1em;
-    font-family: $ffc;
 }
 
 .container {
@@ -118,6 +121,12 @@ header {
         font-size: 0.8em;
         height: 35px;
     }
+    @media screen and (min-width: 400px) {
+        header {
+            padding-left: $pad40;
+            padding-right: $pad40;
+        }
+    }
 }
 
 .masthead{
@@ -143,6 +152,11 @@ header {
     button {
         width: 100%;
     }
+    @media screen and (min-width: 700px) {
+        button {
+            width: 170px;
+        }
+    }
 }
 
 .wrap {
@@ -157,11 +171,13 @@ header {
 
 .features {
     width: 100%;
-    height: 950px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     box-sizing: border-box;
+    padding-top: 100px;
+    padding-bottom: 100px;
     padding-left: $pad20;
     padding-right: $pad20;
     .wrap {
@@ -176,6 +192,23 @@ header {
     }
     a {
         text-decoration: none;
+    }    
+}
+
+@media screen and (min-width: 900px) {
+    .features {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        height: 600px;
+            .wrap {
+            max-width: 280px;
+        }
+        .wrap:nth-child(even) {
+            margin-left: $pad40;
+            margin-right: $pad40;
+        }
     }
 }
 
@@ -183,6 +216,7 @@ header {
     width: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .showcase {
@@ -196,7 +230,6 @@ header {
         height: 100%;
     }
     .textblock {
-        box-sizing: border-box;
         padding-left: 40px;
         padding-right: 40px;
         padding-top: 50px;
@@ -216,6 +249,28 @@ header {
     height: 500px;
     background-image: contain;
     background-position: left;
+}
+
+@media screen and (min-width: 900px) {
+    .showcase .wrap {
+        display:flex;
+        flex-direction: row;
+        width:100%;
+        min-height: 500px;
+        align-items: center;
+        .image {
+            width: 50%;
+        }
+        .textblock {
+            width: 50%;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    }
+    .showcase .wrap:nth-child(odd) {
+        display:flex;
+        flex-direction: row-reverse;
+    }
 }
 
 .testimonials {
@@ -243,6 +298,37 @@ header {
         h1 {
             margin-bottom: 80px;
         }
+        span {
+            margin:0;
+            padding:0;
+        }
+}
+
+@media screen and (min-width: 900px) {
+    .testimonials {
+        height: 100%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .testimonials span {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+    .testimonials span .wrap {
+        max-width: 280px;
+    }
+    .testimonials span .wrap:nth-child(even) {
+            margin-left: $pad40;
+            margin-right: $pad40;
+        }
+    .testimonials span .wrap .textblock {
+        box-sizing: border-box;
+        padding-left: $pad20;
+        padding-right: $pad20;
+        }
+    }
 }
 
 .circle-image {
