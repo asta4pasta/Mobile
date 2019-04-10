@@ -103,13 +103,11 @@ input {
 
 header {
     height: 50px;
-    width: 100%;
+    width: 90%;
     max-width: $maxw;
     margin: 0 auto;
     box-sizing: border-box;
     padding: 10px;
-    padding-left: $pad20;
-    padding-right: $pad20;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -147,7 +145,6 @@ header {
         padding-left: $pad20;
         padding-right: $pad20;
         margin-bottom: 40px;
-        margin-top: -40px;
     }
     button {
         width: 100%;
@@ -156,6 +153,19 @@ header {
         button {
             width: 170px;
         }
+    }
+}
+
+.small {
+    height: 500px;
+}
+
+@media screen and (min-width: 700px) {
+    .masthead {
+        height: 450px;
+    }
+    .masthead.small {
+        height: 300px;
     }
 }
 
@@ -172,6 +182,7 @@ header {
 .features {
     width: 100%;
     height: 100%;
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,7 +212,7 @@ header {
         flex-direction: row;
         justify-content: center;
         align-items: baseline;
-        height: 600px;
+        height: 300px;
             .wrap {
             max-width: 280px;
         }
@@ -256,10 +267,11 @@ header {
         display:flex;
         flex-direction: row;
         width:100%;
-        min-height: 500px;
+        height: 350px;
         align-items: center;
         .image {
             width: 50%;
+            height: 100%;
         }
         .textblock {
             width: 50%;
@@ -298,7 +310,12 @@ header {
         h1 {
             margin-bottom: 80px;
         }
-        span {
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             margin:0;
             padding:0;
         }
@@ -306,34 +323,34 @@ header {
 
 @media screen and (min-width: 900px) {
     .testimonials {
-        height: 100%;
-        padding-top: 10%;
-        padding-bottom: 10%;
+        height: 500px;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
-    .testimonials span {
+    .testimonials h1 {
+        margin-bottom: 0;
+    }
+    .testimonials .box {
+        max-width: $maxw;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        height: 100%;
-    .testimonials span .wrap {
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+    .testimonials .box .wrap {
         max-width: 280px;
     }
-    .testimonials span .wrap:nth-child(even) {
+    .testimonials .box .wrap:nth-child(even) {
             margin-left: $pad40;
             margin-right: $pad40;
-        }
-    .testimonials span .wrap .textblock {
-        box-sizing: border-box;
-        padding-left: $pad20;
-        padding-right: $pad20;
         }
     }
 }
 
 .circle-image {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     background-size: cover;
     background-position: center center;
     box-sizing: border-box;
@@ -342,7 +359,7 @@ header {
 }
 
 footer {
-    width: 100%;
+    width: 90%;
     min-height: 60px;
     margin: 0 auto;
     text-align: center;
@@ -376,10 +393,20 @@ footer {
     }
 }
 
+@media screen and (min-width: 900px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: $pad40;
+        padding-bottom: $pad40;
+    }
+}
+
 ul {
     margin: 0;
     padding: 0;
-    padding-bottom: 10px;
     list-style-type:none;
     display: flex;
     justify-content: center;
@@ -389,6 +416,25 @@ ul {
         line-height: 1.5;
         padding-right: 15px;
         position: relative;
+    }
+}
+
+.footer-nav {
+    margin: 0;
+    padding: 0;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+    .footer-nav {
+        align-items: flex-start;
+        span {
+            margin-bottom: 0;
+        }
     }
 }
 

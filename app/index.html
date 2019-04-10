@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Mobile-first approach</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,7 @@
         </header>
 
         <div class="masthead" style="background-image: url('images/bg-masthead.jpg')">
-                <h1>Build a landing page for your business or project and generate more leads!</h1>
+                <span><h1>Build a landing page for your business or project and generate more leads!</h1></span>
                 <form action="signup.php">
                     <input type="email" name="email" placeholder="Enter your email...">
                     <button>Sign up!</button>
@@ -79,7 +80,7 @@
 
         <div class="testimonials">
             <h1>What people are saying...</h1>
-            <span>
+                <div class="box">
                 <div class="wrap">
                     <div class="circle-image" style="background-image: url('images/testimonials-1.jpg')">
                     </div>
@@ -106,10 +107,10 @@
                         <q>Thanks so much for making these free resources available to us!</q>
                     </div>
                 </div>
-            </span>
+                </div>
         </div>
 
-        <div class="masthead" style="background-image: url('images/bg-masthead.jpg'); height: 500px;">
+        <div class="masthead small" style="background-image: url('images/bg-masthead.jpg');">
             <h1>Ready to get started? Sign up now!</h1>
             <form action="signup.php">
                 <input type="email" name="email" placeholder="Enter your email...">
@@ -118,14 +119,16 @@
         </div>
 
         <footer>
-            <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Terms of use</a></li>
-                <li><a href="">Privacy Policy</a></li>
-            </ul>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
 
-            <span>© Your Website 2018. All Rights Reserved.</span>
+                <span>© Your Website 2018. All Rights Reserved.</span>
+            </div>
 
             <div class="social">
                 <a href="http://facebook.com"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1.08em" height="2em" style="-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)" viewBox="0 0 528 992"><path d="M342 64l6 1h83v96h-83q-7 0-13.5 1t-10.5 3.5-7.5 5.5-6 6-4 6.5-2 6l-1 5-.5 3.5v154h162l-23 96H303v480h-96V448H79v-96h128V203q0-31 8-55.5t21.5-38.5T264 85t31-14 27-5.5 20-1.5zm89 1zM342 0q-62 0-111 30-88 53-88 173v85H79q-26 0-45 19t-19 45v96q0 26 19 45t45 19h64v415q0 27 18.5 45.5T207 991h96q26 0 45-18.5t19-45.5V512h75q22 0 39-13t23-33l22-96q9-31-10-56.5T465 288h-98v-63h64q26 0 45-19t19-45V65q0-27-18.5-45.5T432 1h-82q-4-1-8-1z"/></svg>
