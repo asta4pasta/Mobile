@@ -1,5 +1,5 @@
-$fft: 'Trebuchet MS', sans-serif;
-$ffc: 'Century Gothic', sans-serif;
+$fft: 'Lato', sans-serif;
+$fwl: lighter; //font-weight: light;
 $pad20: 20px;
 $pad40: 40px;
 $blue: #007bff;
@@ -10,6 +10,7 @@ body {
     font-family: $fft;
     margin: 0;
     padding: 0;
+    font-family: 'Lato', sans-serif;
 }
 
 a {
@@ -17,26 +18,26 @@ a {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.3em;
     color: black;
 }
 
 h2 {
     color: black;
-    font-size: 1.7em;
+    font-size: 1.3em;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
 h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
+    font-size: 0.9em;
+    margin-bottom: 5px;
 }
 
 p {
+    line-height: 1.5;
     color: black;
-    font-family: $ffc;
-    font-weight: lighter;
+    font-weight: $fwl;
 }
 q {
     quotes: "“" "”";
@@ -46,9 +47,9 @@ q {
     q:after {
       content: close-quote;
     }
-    font-size: 1em;
-    font-family: $ffc;
+    font-size: 0.8em;
     box-sizing: border-box;
+    font-weight: $fwl;
 }
 
 img {
@@ -61,9 +62,9 @@ svg {
 
 button, input {
     max-width: 320px;
-    height: 45px;
+    height: 35px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 1em;
     border: 0;
 }
@@ -78,8 +79,6 @@ button {
     cursor: pointer;
 }
 
-
-
 input {
     
     background: white;
@@ -89,6 +88,13 @@ input {
     padding-left: $pad20;
     margin-bottom: 10px;
     outline-color: $blue;
+}
+
+.textblock {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
@@ -102,7 +108,7 @@ input {
 }
 
 header {
-    height: 50px;
+    height: 40px;
     width: 90%;
     max-width: $maxw;
     margin: 0 auto;
@@ -113,11 +119,13 @@ header {
     align-items: center;
     a {
         color: black;
+        font-size: 0.9em;
     }
     button {
-        width: 70px;
-        font-size: 0.8em;
-        height: 35px;
+        width: 60px;
+        font-size: 0.7em;
+        height: 30px;
+        border-radius: 3px;
     }
     @media screen and (min-width: 400px) {
         header {
@@ -137,6 +145,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     box-sizing: border-box;
     h1 {
@@ -167,14 +176,16 @@ header {
     .masthead.small {
         height: 300px;
     }
+    .masthead .textblock {
+        width: 700px;
+    }
 }
 
 .wrap {
     width: 100%;
     min-height: 200px;
     p {
-        line-height: 1.5;
-        font-size: 1.1em;
+        font-size: 1em;
         margin-top: 0;
     }
 }
@@ -212,7 +223,8 @@ header {
         flex-direction: row;
         justify-content: center;
         align-items: baseline;
-        height: 300px;
+        height: 350px;
+        padding-top: 55px;
             .wrap {
             max-width: 280px;
         }
@@ -223,16 +235,9 @@ header {
     }
 }
 
-.textblock {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .showcase {
     width: 100%;
-    min-height: 300px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -246,19 +251,12 @@ header {
         padding-top: 50px;
         padding-bottom: 50px;
     }
-    h1 {
-        font-size: 2.1em;
-        margin-bottom: 10px;
-    }
-    p {
-        line-height: 1.7em;
-    }
 }
 
 .image {
     width: 100%;
-    height: 500px;
-    background-image: contain;
+    height: 350px;
+    background-image: cover;
     background-position: left;
 }
 
@@ -267,11 +265,12 @@ header {
         display:flex;
         flex-direction: row;
         width:100%;
-        height: 350px;
+        height: 360px;
         align-items: center;
         .image {
             width: 50%;
             height: 100%;
+            background-image: cover;
         }
         .textblock {
             width: 50%;
@@ -307,9 +306,6 @@ header {
             text-align: center;
             margin-bottom: 50px;            
         }
-        h1 {
-            margin-bottom: 80px;
-        }
         .box {
             display: flex;
             flex-direction: column;
@@ -318,39 +314,35 @@ header {
             text-align: center;
             margin:0;
             padding:0;
+            margin-top: 30px;
         }
 }
 
 @media screen and (min-width: 900px) {
     .testimonials {
-        height: 500px;
-        padding-top: 100px;
-        padding-bottom: 100px;
+        height: 450px;
+        padding-top: 60px;
     }
-    .testimonials h1 {
-        margin-bottom: 0;
-    }
+    
     .testimonials .box {
-        max-width: $maxw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         margin-top: 30px;
-
+    }
     .testimonials .box .wrap {
         max-width: 280px;
+        margin-bottom: 0;
     }
-    .testimonials .box .wrap:nth-child(even) {
-            margin-left: $pad40;
-            margin-right: $pad40;
-        }
+    .testimonials .box .wrap .textblock {
+        width: 80%;
     }
 }
 
 .circle-image {
-    width: 160px;
-    height: 160px;
+    width: 145px;
+    height: 145px;
     background-size: cover;
     background-position: center center;
     box-sizing: border-box;
@@ -364,8 +356,8 @@ footer {
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     padding-left: $pad20;
     padding-right: $pad20;
     display: flex;
@@ -373,13 +365,14 @@ footer {
     justify-content: center;
     align-items: center;
     a {
+        font-size: 0.7em;
         color: $blue;
         cursor: pointer;
     }
     span {
         color: grey;
-        font-size: 0.8em;
-        margin-top: 5px;
+        font-size: 0.5em;
+        margin-top: 1em;
         margin-bottom: 20px;
     }
     ul li::after {
@@ -439,7 +432,7 @@ ul {
 }
 
 .social {
-    width: 180px;
+    width: 150px;
     height: 100%;
     display: flex;
     justify-content: space-between;
